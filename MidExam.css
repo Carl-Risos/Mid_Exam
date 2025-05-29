@@ -1,0 +1,73 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: url('https://images4.alphacoders.com/882/882720.png') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.title {
+  text-align: center;
+  font-size: 2em;
+  color: red;
+  padding: 20px;
+  background: linear-gradient(to bottom, rgba(0, 255, 255, 0.6), transparent);
+}
+
+.zodiac-container {
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  justify-content: center;
+  gap: 20px;
+  padding: 30px;
+}
+
+.zodiac-container img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid white;
+  transition: transform 0.3s ease;
+}
+
+.zodiac-container img:hover {
+  transform: scale(1.1);
+}
+
+.info-box {
+  position: fixed;
+  bottom: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, rgba(255,0,0,0.8), rgba(255,255,0,0.8));
+  color: white;
+  font-size: 1.2em;
+  padding: 25px 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+  opacity: 0;
+  transition: all 0.5s ease;
+  z-index: 99;
+  pointer-events: none;
+}
+
+.info-box:target {
+  bottom: 30px;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.info-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.info-box a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 5px 10px;
+  background-color: darkred;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
